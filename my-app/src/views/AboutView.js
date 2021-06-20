@@ -3,21 +3,11 @@ import Hero from '../components/Hero';
 const AboutView = () => {
   return (
     <>
-      <Hero text="About React 201 Project" />
+      <Hero text="About JMDB Project" />
       <div className="container">
         <div className="row">
-          <div className="col-lg-8 offset-lg-2 my-5">
-          <h2>React 201 project:</h2>
-              <p className="lead">
-                You will be creating a movie browser that's API driven. There's a search function,
-                movie detail view, about page, all built into a single page application / progressive web application.
-              </p>
-              <p className="lead">
-                There are tasks I have purposely left out of this project for you to solve on your own. This is
-                VERY similar to a take home assignment that a company will give you when you apply to work with
-                them.
-              </p>
-              <p className="lead">Just a few bugs that have not been solved yet:</p>
+          <div className="col-lg-8 offset-lg-2 my-1">
+          <h2>Projects TODO List</h2>
               <ul className="lead">
                 <li>Done:  Sometimes a search result doesn't have an image</li>
                 <li>Done:  If No Rating is found display MPAA NR = No Rating</li>
@@ -26,7 +16,7 @@ const AboutView = () => {
                 <li>Done:  I might have a issue if the MPAA doesn't find US</li>
                 <li>Done:  Missing Poster fuzzy in movie view - converted to font awesome</li>
                 <li>Done:  Sticky left column</li>
-                <li>Done:  There is no 404 page - page done but doesn't get trigger yet</li>
+                <li>Done:  There is no 404 page</li>
                 <li>The search button in the navigation doesn't work</li>
                 <li>TODO:  Fix Loader</li>
                 <li>TODO:  <span className='lineStrike'>No Missing Poster in movie view</span>  - Need to catch error</li>
