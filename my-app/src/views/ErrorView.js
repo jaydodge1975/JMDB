@@ -5,7 +5,7 @@ import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 const ErrorView = () => {
   return (
     <>
-      <Hero text='Oops! Something went wrong :('/>
+      <Hero text="Oops! Something went wrong :(" />
       <div className='errorPage container'>
         <div className='row'>
           <div className='col-md-4'>
@@ -13,7 +13,7 @@ const ErrorView = () => {
           </div>
 
           <div className='col-md-8'>
-            <div className='errorWapper'>
+            <div className='errorWarper'>
               <div className='errorLine1'>404</div>
               <div className='errorLine2'>error</div>
               <div className='errorLine3'>Page not found</div>

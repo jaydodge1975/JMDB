@@ -1,3 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
 ::-webkit-scrollbar {
   width: 1rem; }
   ::-webkit-scrollbar-track {
@@ -21,14 +28,16 @@
 .errorQuestion{
   color: #8d8b8b;
   position: relative;
-  top: 10vh;
-  font-size: 40rem;
+  top: 5.5vh;
+  font-size: 41.7rem;
+  transform: rotate(-30deg);
   opacity: 0.25;
   z-index: 2;
 }
 
-.errorWapper {
+.errorWarper {
   position: relative;
+  top: -6.5vh;
 }
 
 .errorLine1 {
@@ -256,19 +265,16 @@ body {
 
 .movie-poster {
   position: sticky;
-  position: -webkit-sticky;
-  top: 9rem;
-  /* top: 25vh;
-  left: 16vw;*/
-  /* width: 20rem; */
+  top: 8rem;
+  width: 92%;
   z-index: 300;
-  /* opacity: 0; */
 }
 
 .underPoster {
   position: sticky;
-  top: 47rem;
+  top: 43rem;
   left: 0;
+  width: 92%;
   z-index: 500;
 }
 
@@ -277,7 +283,7 @@ body {
   flex-direction: row;
   padding: 0.125rem;
   font-size: 1.125rem;
-  margin: 0.3rem 0;
+  margin: 0.2rem 0;
   justify-content: space-between;
 }
 
@@ -297,7 +303,7 @@ body {
   flex-direction: row;
   padding: 0.125rem;
   font-size: 1.125rem;
-  margin: 0.3rem 0;
+  margin: 0.2rem 0;
   justify-content: space-between;
 }
 
@@ -311,7 +317,7 @@ body {
 
 .genres {
   padding: 0.1rem 0.5rem;
-  margin: 0 0.5rem 0.5rem 0;
+  margin: 0 0.4rem 0.4rem 0;
   background-color: #212529;
   border: 0.1rem solid #f4f4f4;
   border-radius: 0.3rem;
@@ -379,7 +385,7 @@ body {
 
 .movie-details {
   position: relative;
-  top: 11.25vh;
+  top: 9.6vh;
   z-index: 200;
 }
 

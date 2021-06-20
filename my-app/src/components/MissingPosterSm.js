@@ -1,8 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
 
-
-
 const MissingPosterSm = (imgName, imgTitle) => {
   if (imgName !== null) {
     const posterUrl = `https://image.tmdb.org/t/p/w500${imgName}`

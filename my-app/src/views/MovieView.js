@@ -1,6 +1,7 @@
 import Hero2 from '../components/Hero2';
 import MpaaRating from '../components/MPAA';
 import MissingPosterLg from '../components/MissingPosterLg';
+// import TimeConverter from '../components/TimeConverter';
 // import Genres from '../components/Genres';
 import VideoPlayer from '../components/VideoPlayer';
 import Cast from '../components/Cast';
@@ -40,60 +41,8 @@ const MovieView = () => {
     let rminutes = Math.round(minutes);
     return rhours + "hr " + rminutes + "min";
   }
-
-  let runTime = timeConvert(movieDetails.runtime);
-
-
-
-  // function castDisplay() {
-
-    // for (let i = 0; i < 20; i++) {
-
-      // charPicUrl.map
-    // return (
-    //   {charPicUrl.map((charPicUrl) => (
-    //     <div className='charPic'><img src={charPicUrl} key={charId} alt='' /></div>
-    //   ))}
-    // );
-
-
-    // const castDisplay = () => {
-
-    //   return (
-    //     <div className={'charWrapper' + charInfo.id}>
-    //     {charInfo.map(charInfo => {
-    //       return (
-    //         <div className='charInfo' key={charInfo.id}>{charInfo.name}</div>
-    //       )
-    //     })}
-    //     </div>
-    //   )
-    
-    // };
-
-
-      // <div className={'charWrapper' + charGen}>
-
-      //   <div className='charPic'><img src={charPicUrl} key={charId} alt='' /></div>
-
-      //   <div>{charName}</div>
-      //   <div>{charRealName}</div>
-      // </div>
-  // }
-
-
-
-
-    // if (charPicUrl !== null) {
-    //   let picUrl = 'https://image.tmdb.org/t/p/original'
-    //   let vaildPicUrl = (picUrl + charPicUrl)
-    // } else {
-    //   let charPicCheck = 'noPic';
-    // }
-
-    // console.log(vaildPicUrl)
-
-
+  
+  let TimeConverter = timeConvert(movieDetails.runtime);
 
   function renderMovieDetails() {
     if(isLoading) {
@@ -121,7 +70,7 @@ const MovieView = () => {
                       <div className='lang'>{movieDetails.original_language}</div>
                     </div>
                     <div className='underLine2'>
-                      <div>Run Time:  {runTime}</div>
+                      <div>Run Time:  {TimeConverter}</div>
                       <div>Rating:  {movieDetails.vote_average}</div>
                     </div>
                     <div className='genreContainer'>
@@ -135,7 +84,6 @@ const MovieView = () => {
 
               </div>
 
-
                 <div className='movie-details col-md-8'>
                   <div className='details'>
                     <h1>{movieDetails.original_title}</h1>
@@ -146,43 +94,12 @@ const MovieView = () => {
 
                       <Cast />
 
-                      {/* <h3>Cast</h3> */}
-                      {/* <div className='castMembers'>
-                        {castCrew.cast.map(cast => {
-                          return (
-                            <div className={'charWrapper' + cast.gender} key={cast.cast_id}>
-                              <div className='charPic'><img
-                                src={'https://image.tmdb.org/t/p/original' + cast.profile_path}
-                                // key={cast.id}
-                                alt=""
-                              /></div>
-                              <div className='charName' key={cast.credit_id}>{cast.character}</div>
-                              <div className='charRealName' key={cast.id}>{cast.original_name}</div>
-                            </div>
-                          )
-                        })}
-                      </div> */}
-
-
-
-
-
-
-                  
-              {/* {charInfo.name.map(charInfo => {
-                return (
-                  <div className='charInfo' key={charInfo.id}>{charInfo.name}</div>
-                )
-              })} */}
-
-
                   <h3>Crew</h3>
                   <h3>Collections</h3>
                   <h3>Similar</h3>
                   <div className='testPage'></div>
-                  Page End
+                  <div>Page End</div>
                 </div>
-
 
             </div>
           </div>

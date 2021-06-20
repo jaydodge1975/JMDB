@@ -1,8 +1,8 @@
 import { useHistory, Link } from 'react-router-dom';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton'
-import FormControl from 'react-bootstrap/FormControl'
-import InputGroup from 'react-bootstrap/InputGroup';
+// import Dropdown from 'react-bootstrap/Dropdown';
+// import DropdownButton from 'react-bootstrap/DropdownButton'
+// import FormControl from 'react-bootstrap/FormControl'
+// import InputGroup from 'react-bootstrap/InputGroup';
 
 const Navbar = ({ searchText, setSearchText }) => {
 
@@ -47,7 +47,7 @@ const Navbar = ({ searchText, setSearchText }) => {
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/coming">Coming soon</Link>
+              <Link className="nav-link" to="/coming-soon">Coming soon</Link>
             </li>
 
             <li className="nav-item">
@@ -56,9 +56,8 @@ const Navbar = ({ searchText, setSearchText }) => {
 
           </ul>
 
-
-          <InputGroup>
-            <FormControl
+          {/* <InputGroup>
+             <FormControl
               // placeholder="Search"
               // aria-label="Search"
               aria-describedby="basic-addon2"
@@ -82,10 +81,10 @@ const Navbar = ({ searchText, setSearchText }) => {
               <Dropdown.Item href="#">Movies</Dropdown.Item>
               <Dropdown.Item href="#">TV Shows</Dropdown.Item>
               <Dropdown.Item href="#">People</Dropdown.Item>
-            </DropdownButton>
-          </InputGroup>
+            </DropdownButton> 
+          </InputGroup> */}
 
-          {/* <form className="d-flex">
+          <form className="d-flex">
             <input
             className="form-control me-2"
             type="search"
@@ -94,8 +93,8 @@ const Navbar = ({ searchText, setSearchText }) => {
             value={searchText}
             onChange={updateSearchText}
             />
-            <button className="btn btn-outline-secondary" type="submit">Search</button>
-          </form> */}
+            <button className="btn btn-outline-secondary" type="button" onClick={updateSearchText}>Search</button>
+          </form>
 
         </div>
       </div>

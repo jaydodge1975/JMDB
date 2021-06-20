@@ -1,6 +1,6 @@
 import Hero from '../components/Hero';
 
-const TvView = () => {
+const TelevisionView = () => {
   return (
     <>
       <Hero text="TV Shows" />
@@ -9,4 +9,4 @@ const TvView = () => {
   );
 };
 
-export default TvView;
+export default TelevisionView;

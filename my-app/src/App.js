@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import HomeView from './views/HomeView';
 import MoviesView from './views/MoviesView';
-import TvView from './views/TvView';
+import TelevisionView from './views/TelevisionView';
 import PeopleView from './views/PeopleView';
 import PopularView from './views/PopularView';
 import AboutView from './views/AboutView';
@@ -40,7 +40,7 @@ function App() {
       <Switch>
         <Route path='/' exact component={HomeView} />
         <Route path='/movies' component={MoviesView} />
-        <Route path='/tv' component={TvView} />
+        <Route path='/tv' component={TelevisionView} />
         <Route path='/people' component={PeopleView} />
         <Route path='/popular' component={PopularView} />
         <Route path='/about' component={AboutView} />
