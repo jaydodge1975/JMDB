@@ -20,6 +20,7 @@ function App() {
 
   useEffect(() => {
     if(searchText) {
+
       fetch(`https://api.themoviedb.org/3/search/movie?api_key=6dbfefac6de6ecc76ddbd5147477c2e3&language=en-US&query=${searchText}&page=1&include_adult=false`)
         .then(response => response.json())
         .then(data => {
@@ -31,6 +32,21 @@ function App() {
             setReturnedSearched(false)
           }
         })
+
+      // fetch(`https://api.themoviedb.org/3/tv/${searchText}?api_key=6dbfefac6de6ecc76ddbd5147477c2e3&language=en-US`)
+      //   .then(response => response.json())
+      //   .then(data => {
+      //     console.log(data)
+      //     setSearchResults(data.results)
+      //     if (data.results.length > 0) {
+      //       setReturnedSearched(true)
+      //     } else {
+      //       setReturnedSearched(false)
+      //     }
+      //   })
+
+
+
     }
   }, [searchText])
 

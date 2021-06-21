@@ -4,15 +4,68 @@
   box-sizing: border-box;
 }
 
-
 ::-webkit-scrollbar {
-  width: 1rem; }
-  ::-webkit-scrollbar-track {
-    background: #333333; }
-  ::-webkit-scrollbar-thumb {
-    background: #575757; }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #636363; }
+  width: 16px; }
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track {
+  background: #333333; }
+::-webkit-scrollbar-thumb {
+  background: #575757;
+  background-clip: padding-box;
+  border: 3px solid transparent; }
+::-webkit-scrollbar-thumb:hover {
+  background: #575757; }
+::-webkit-scrollbar-thumb:active {
+  background-color: #636363; }
+::-webkit-scrollbar-button:single-button {
+  background-color: #333333;
+  display: block;
+  background-size: 10px;
+  background-repeat: no-repeat; }
+::-webkit-scrollbar-button:single-button:active {
+  background-color: #575757; }
+/* Up */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  height: 12px;
+  width: 16px;
+  background-position: center 4px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='50,00 0,50 100,50'/></svg>"); }
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='50,00 0,50 100,50'/></svg>"); }
+::-webkit-scrollbar-button:single-button:vertical:decrement:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='50,00 0,50 100,50'/></svg>"); }
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  height: 12px;
+  width: 16px;
+  background-position: center 2px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,0 100,0 50,50'/></svg>"); }
+::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='0,0 100,0 50,50'/></svg>"); }
+::-webkit-scrollbar-button:single-button:vertical:increment:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,0 100,0 50,50'/></svg>"); }
+/* Left */
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  height: 12px;
+  width: 12px;
+  background-position: 3px 3px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,50 50,100 50,0'/></svg>"); }
+::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='0,50 50,100 50,0'/></svg>"); }
+::-webkit-scrollbar-button:single-button:horizontal:decrement:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,50 50,100 50,0'/></svg>"); }
+/* Right */
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+  height: 12px;
+  width: 12px;
+  background-position: 3px 3px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,0 0,100 50,50'/></svg>"); }
+::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='0,0 0,100 50,50'/></svg>"); }
+::-webkit-scrollbar-button:single-button:horizontal:increment:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,0 0,100 50,50'/></svg>"); }
+
+
 
 ::selection {
   color: #2d2d2d;
@@ -133,6 +186,14 @@ body {
   border-color: #6c757d;
   /* box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%); */
   box-shadow: 0 0 0 0.25rem rgb(108 117 125 / 25%);
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 0.8rem;
+  width: 0.8rem;
+  cursor: pointer;
+  background-image: url(./components/images/grey_close_x.svg);
 }
 
 .hero-container {
@@ -411,18 +472,23 @@ body {
   transform: translateX(-50%)
 }
 
+.castMembersTitle {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 .castMembers {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 105%;
+  width: 110%;
 }
 
 .charWrapper0 {
   display: flex;
   flex-direction: column;
   background-color: #888888;
-  width: 13rem;
+  width: 11.3rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -434,7 +500,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #ef6491;
-  width: 13rem;
+  width: 11.3rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -446,7 +512,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #326497;
-  width: 13rem;
+  width: 11.3rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -456,8 +522,8 @@ body {
 
 .charPic {
   display: flex;
-  padding: 0.5rem;
-  width: 12.5rem;
+  padding: 0.05rem;
+  width: 100%;
   height: auto;
 }
 
